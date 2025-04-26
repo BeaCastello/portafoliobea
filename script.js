@@ -120,34 +120,3 @@ function toggleContent() {
   }
 }
 
-const experiencias = [
-  {
-    titulo: "Desarrollador Frontend - PixelSoft",
-    imagen: "https://via.placeholder.com/300x200?text=PixelSoft",
-    texto: "Encargado del desarrollo y mantenimiento de interfaces modernas usando React, Tailwind y herramientas de diseño responsivo. Colaboración estrecha con equipos de backend y diseño."
-  },
-  {
-    titulo: "Diseñador UX - Creativo Studio",
-    imagen: "https://via.placeholder.com/300x200?text=Creativo+Studio",
-    texto: "Responsable de investigar y crear prototipos centrados en el usuario, mejorando la experiencia digital en más de 10 productos web y móviles."
-  },
-  {
-    titulo: "Analista QA - TechTesters",
-    imagen: "https://via.placeholder.com/300x200?text=TechTesters",
-    texto: "Planificación y ejecución de pruebas automatizadas/manuales. Optimización de procesos de control de calidad y entrega continua."
-  }
-];
-
-function mostrarExperiencia(index) {
-  const content = document.getElementById('expContent');
-  const selected = experiencias[index];
-  content.innerHTML = `
-    <h3>${selected.titulo}</h3>
-    <img src="${selected.imagen}" alt="${selected.titulo}">
-    <p>${selected.texto}</p>
-  `;
-
-  const listItems = document.querySelectorAll('#expList li');
-  listItems.forEach(li => li.classList.remove('active'));
-  listItems[index].classList.add('active');
-}
