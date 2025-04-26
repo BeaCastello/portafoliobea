@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="imagenes/20.png" class="logo" alt="logo">
+        <nav id="nav">
+            <ul class="nav-links">
+                <li data-i18n="home"><a href="#home">Inicio</a></li>
+                <li data-i18n="aboutme"><a href="#aboutMe">Sobre mí</a></li>
+                <li data-i18n="training"><a href="#projects">Formación</a></li>
+                <li data-i18n="work_experience"><a href="#projects">Experiencia Laboral</a></li>               
+                <li data-i18n="skills"><a href="#projects">Habilidades</a></li>
+                <li data-i18n="contact"><a href="#contact">Contacto</a></li>
+                <div class="lang-selector">
+                    <button id="lang-btn">
+                        <img src="https://flagcdn.com/es.svg" alt="ES" class="flag" />
+                        <span id="lang-label">ES</span>
+                    </button>
+                    <ul id="lang-menu" class="lang-menu">
+                        <li data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES" class="flag" /> Español</li>
+                        <li data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN" class="flag" /> English</li>
+                    </ul>
+                </div>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="imagenes/banner.mp4" type="video/mp4" />
+        </video>
+        <div class="banner-content">
+            <h1 data-i18n="banner_title">Portafolio Bea</h1>
+            <p data-i18n="banner_subtitle">Profesional creativa con pasión por la programación y el diseño gráfico</p>
+            <div class="banner-buttons">
+                <button data-i18n="banner_btn" class="btn_transparent">Formación</button>
+                <button data-i18n="banner_btn1" class="btn_transparent">Contacto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobre mi-->
+    <div class="aboutMe" id="aboutMe">
+        <h2> Sobre mi </h2>
+        <p class="text_aboutMe">
+            Soy una desarrolladora apasionada por la creación de experiencias digitales que combinan código limpio y
+            diseño visual impactante.
+            Me encanta convertir ideas en proyectos funcionales que conecten con las personas.
+        </p>
+        <p class="text_aboutMe">
+            Me destaco por ser una persona creativa, proactiva y con una actitud positiva hacia el aprendizaje continuo.
+            Me adapto con facilidad a nuevos entornos, aprendo con rapidez y disfruto asumir retos que me permitan
+            crecer personal
+            y profesionalmente. Soy responsable, receptiva, con buenas habilidades para el trabajo en equipo y una
+            sólida capacidad de escucha.
+            Además, cuento con disponibilidad horaria y un manejo eficiente de herramientas informáticas.
+        </p>
+        <div class="aboutMe_btn">
+            <button class="show_more" onclick="toggleContent()">Mostrar más</button>
+            <button class="cV_btn"> <a href="Módulo Curso.pdf" target="_blank" class="cV_btn">Descargar pdf</a></button>
+        </div>
+        <div class="content-container" id="content-container">
+            <div class="text-content">
+                <h3 class="additional-title">Formación en Ingeniería y Arquitectura, con especialización en Tecnologías
+                    de la Información y la
+                    Comunicación (TIC).</h3>
+                <p class="additional-text">
+                    He ampliado mi formación a través de cursos impartidos por LABORA, como Actividades Administrativas
+                    en Relación con el Cliente y Operaciones Auxiliares de
+                    Servicios Administrativos y Generales, fortaleciendo así un perfil multidisciplinar orientado al
+                    ámbito
+                    administrativo y tecnológico.
+                    Cuento con experiencia laboral en los sectores de informática, administración y diseño
+                    gráfico. </p>
+                <p class="additional-text1">
+                    Actualmente me especializo en diseño gráfico, desarrollo de sitios web, tiendas en
+                    línea y plataformas educativas. También gestiono y actualizo redes sociales, además de crear
+                    y optimizar
+                    cuentas en diversas plataformas digitales.</p>
+            </div>
+            <div class="image-content">
+                <img src="imagenes/Foto Curriculum.jpg" alt="photo" class="Bea-photo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Formación  -->
+
+    <div class="training">
+        <!-- Imágenes lado izquierdo -->
+        <div class="training-left">
+            <img src="imagenes/imagen chica.png" class="photo1" alt="Foto 1" />
+            <img src="imagenes/imagen chica.png" class="photo2" alt="Foto 2" />
+        </div>
+
+        <!-- Texto lado derecho -->
+        <div class="training-right">
+            <h2>Formación Profesional</h2>
+            <p>
+                Con una base sólida en educación y una constante actualización de conocimientos, he desarrollado
+                habilidades en diversos campos. Mi enfoque está en combinar teoría con práctica para lograr resultados
+                reales y sostenibles.
+            </p>
+            <button class="cV_btn1"> <a href="Módulo Curso.pdf" target="_blank">Descargar pdf</a></button>
+        </div>
+    </div>
+
+<!-- Experiencia Laboral  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class="experiencia-section">
+        <!-- Lado Izquierdo -->
+        <div class="exp-left">
+          <h2>Experiencia</h2>
+          <ul class="exp-list" id="expList">
+            <li class="active" onclick="mostrarExperiencia(0)">Desarrollador Frontend - PixelSoft</li>
+            <li onclick="mostrarExperiencia(1)">Diseñador UX - Creativo Studio</li>
+            <li onclick="mostrarExperiencia(2)">Analista QA - TechTesters</li>
+          </ul>
+        </div>
+    
+        <!-- Lado Derecho -->
+        <div class="exp-right">
+          <div class="exp-content" id="expContent">
+            <h3>Desarrollador Frontend - PixelSoft</h3>
+            <img src="https://via.placeholder.com/300x200?text=PixelSoft" alt="Empresa 1">
+            <p>
+              Encargado del desarrollo y mantenimiento de interfaces modernas usando React, Tailwind y herramientas de diseño responsivo. Colaboración estrecha con equipos de backend y diseño.
+            </p>
+          </div>
+        </div>
+      </section>
+    
+
+
+
+
+      <section class="habilidades-section">
+        <h2>Habilidades</h2>
+        <div class="habilidades-grid">
+          <div class="habilidad-card" onclick="toggleCard(this)">
+            <div class="habilidad-icon">💻</div>
+            <div class="habilidad-title">Desarrollo Web</div>
+            <div class="habilidad-desc">HTML, CSS, JavaScript, frameworks modernos y responsive design.</div>
+          </div>
+    
+          <div class="habilidad-card" onclick="toggleCard(this)">
+            <div class="habilidad-icon">⚙️</div>
+            <div class="habilidad-title">Automatización</div>
+            <div class="habilidad-desc">Scripts para automatizar tareas con Python y herramientas no-code.</div>
+          </div>
+    
+          <div class="habilidad-card" onclick="toggleCard(this)">
+            <div class="habilidad-icon">🎨</div>
+            <div class="habilidad-title">Diseño UI/UX</div>
+            <div class="habilidad-desc">Diseños centrados en la experiencia del usuario con Figma y Adobe XD.</div>
+          </div>
+    
+          <div class="habilidad-card" onclick="toggleCard(this)">
+            <div class="habilidad-icon">🔐</div>
+            <div class="habilidad-title">Ciberseguridad</div>
+            <div class="habilidad-desc">Conocimientos en buenas prácticas, análisis de vulnerabilidades y protección de datos.</div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+
+    <footer>
+        <p>&copy; 2025 Portafolio Bea. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<video autoplay muted loop playsinline class="bg-video">
+    <source src="imagenes/banner.mp4" type="video/mp4" />
+</video>
+
+</html>
