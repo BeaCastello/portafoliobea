@@ -120,17 +120,17 @@ nav a {
 
 .lang-menu.show {
   display: block;
-} 
+}
 
-ul li{
+ul li {
   padding: 3px 3px;
-  }
+}
 
-  ul li:hover{
-    transform: scale(1.1);
-    color: #f0c975;
-  }
-  
+ul li:hover {
+  transform: scale(1.1);
+  color: #f0c975;
+}
+
 
 
 
@@ -239,7 +239,13 @@ footer {
 }
 
 .btn_transparent:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #e7b74f;
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 3.5rem;
+  }
 }
 
 /* About me  */
@@ -490,63 +496,102 @@ a {
   }
 }
 
-.habilidades-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-}
+/* Work Experience */
 
-.habilidades-section h2 {
+h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
+  margin-top: 30px;
 }
 
-.habilidades-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+.experience-container {
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;  
+  border-top: 1px solid #ccc;
 }
 
-.habilidad-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+.exp-menu {
+  width: 40%;
+  border-right: 1px solid #ccc;
+  padding-right: 0.5rem;
+  
+}
+
+.exp-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.exp-menu li {
   cursor: pointer;
-  position: relative;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
-.habilidad-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+.exp-menu li.active {
+  background-color: #4f46e5;
+  color: #fff;
+  border-radius: 5px;
+}
+.exp-content {
+  flex-grow: 1;
+  padding-left: 2rem;
+  
 }
 
-.habilidad-card.active {
-  border: 2px solid #4f46e5;
+.exp-content h2 {
+  margin-top: 10px;
+  font-size: 1.4rem;
 }
 
-.habilidad-icon {
-  font-size: 3rem;
+.image-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
-.habilidad-title {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.image-row img {
+  width: 30%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.habilidad-desc {
-  font-size: 0.95rem;
-  color: #666;
-  display: none;
-  margin-top: 1rem;
+.description {
+  font-size: 1rem;
+  color: #444;
 }
 
-.habilidad-card.active .habilidad-desc {
-  display: block;
+@media (max-width: 768px) {
+h2{
+  margin-bottom: 2rem;
+  font-size: 1.7rem;
+}
+  
+  .experience-container {
+    flex-direction: column;
+  }
+
+  .exp-menu {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+    .exp-menu li.active {
+    width: 290px;
+    margin-left: 13px;
+    font-size: 14px;
+  }
 }
 

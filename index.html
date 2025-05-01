@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
@@ -114,88 +115,23 @@
         </div>
     </div>
 
-    <!-- Experiencia Laboral  -->
-    <div class="work_experience">
-        <h2>Experiencia Laboral</h2>
-        <div class="workExp-left">
-            <p> Diseñadora</p>
-            <p> Profesora</p>
-            <p> Auxiliar administrativa</p>
-            <p> Comercial de venta</p>
-            <button class="cV_btn1"> <a href="Módulo Curso.pdf" target="_blank">Descargar pdf</a></button>
-        </div>
-        <div class="workExp-right">
-            <p>@designerbrm</p>
-            <img src="imagenes/Foto Curriculum.jpg" alt="photoBea"></img>
+    <!-- Word Experience -->
 
+    <h2>Experiencia Laboral</h2>
+    <section class="experience-container">
+        <!-- Menú lateral -->
+        <div class="exp-menu">
+            <ul id="rolList">
+                <li class="active" onclick="mostrarExperiencia(0)">--> Desarrollo web y plataformas educativas</li>
+                <li onclick="mostrarExperiencia(1)">--> Profesora</li>
+                <li onclick="mostrarExperiencia(2)">--> Auxiliar administrativo</li>
+                <li onclick="mostrarExperiencia(3)">--> Comercial de ventas</li>
+            </ul>
         </div>
 
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="habilidades-section">
-        <h2>Habilidades</h2>
-        <div class="habilidades-grid">
-            <div class="habilidad-card" onclick="toggleCard(this)">
-                <div class="habilidad-icon">💻</div>
-                <div class="habilidad-title">Desarrollo Web</div>
-                <div class="habilidad-desc">HTML, CSS, JavaScript, frameworks modernos y responsive design.</div>
-            </div>
-
-            <div class="habilidad-card" onclick="toggleCard(this)">
-                <div class="habilidad-icon">⚙️</div>
-                <div class="habilidad-title">Automatización</div>
-                <div class="habilidad-desc">Scripts para automatizar tareas con Python y herramientas no-code.</div>
-            </div>
-
-            <div class="habilidad-card" onclick="toggleCard(this)">
-                <div class="habilidad-icon">🎨</div>
-                <div class="habilidad-title">Diseño UI/UX</div>
-                <div class="habilidad-desc">Diseños centrados en la experiencia del usuario con Figma y Adobe XD.</div>
-            </div>
-
-            <div class="habilidad-card" onclick="toggleCard(this)">
-                <div class="habilidad-icon">🔐</div>
-                <div class="habilidad-title">Ciberseguridad</div>
-                <div class="habilidad-desc">Conocimientos en buenas prácticas, análisis de vulnerabilidades y protección
-                    de datos.</div>
-            </div>
+        <!-- Contenido dinámico -->
+        <div class="exp-content" id="expContent">
+            <!-- Se llena con JS -->
         </div>
     </section>
 
@@ -230,14 +166,43 @@
 
 
 
-    <footer>
-        <p>&copy; 2025 Portafolio Bea. Todos los derechos reservados.</p>
-    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="script.js"></script>
+
+
 </body>
-<video autoplay muted loop playsinline class="bg-video">
-    <source src="imagenes/banner.mp4" type="video/mp4" />
-</video>
+
 
 </html>

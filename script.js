@@ -24,7 +24,7 @@ const translations = {
     banner_btn1: "Contáctame",
     work_experience: "Experiencia Laboral",
     contact: "Contacto",
-   
+
 
 
 
@@ -48,7 +48,7 @@ const translations = {
     banner_btn1: "Contact Me",
     work_experience: "Work Experience",
     contact: "Contact",
-   
+
 
 
 
@@ -112,11 +112,67 @@ function toggleContent() {
   const button = document.querySelector('.show_more');
 
   if (contentContainer.style.display === 'flex') {
-      contentContainer.style.display = 'none';
-      button.textContent ='Mostrar más';
+    contentContainer.style.display = 'none';
+    button.textContent = 'Mostrar más';
   } else {
-      contentContainer.style.display = 'flex';
-      button.textContent = 'Mostrar menos';
+    contentContainer.style.display = 'flex';
+    button.textContent = 'Mostrar menos';
   }
 }
 
+
+
+const experiencias = [
+  {
+    titulo: "Desarrollo web y plataformas educativas",
+    imagenes: [
+      "imagenes/paginaweb.png",
+      "imagenes/paginaweb1.png",
+      "imagenes/paginaweb2.png"
+    ],
+    descripcion: "Creación de páginas web para la publicidad de servicios y plataformas educativas."
+  },
+  {
+    titulo: "Profesora",
+    imagenes: [
+      "imagenes/academia.png",
+      "imagenes/academia.png"
+    ],
+    descripcion: "Planificación e impartición de clases adaptadas al nivel educativo y a las necesidades del estudiante."
+  },
+  {
+    titulo: "Auxiliar administrativo",
+    imagenes: [
+      "imagenes/paginaweb.png",
+      "imagenes/paginaweb.png",
+      "imagenes/paginaweb.png"
+    ],
+    descripcion: "Apoyo en tareas administrativas, gestión de documentación y atención al cliente."
+  },
+  {
+    titulo: "Comercial de ventas",
+    imagenes: [
+      "imagenes/paginaweb.png"
+    ],
+    descripcion: "Encargado de la promoción, captación de clientes y cierre de ventas de productos y servicios."
+  }
+];
+
+function mostrarExperiencia(index) {
+  const exp = experiencias[index];
+  const container = document.getElementById("expContent");
+  container.innerHTML = `
+    <h2>${exp.titulo}</h2>
+    <div class="image-row">
+      ${exp.imagenes.map(src => `<img src="${src}" alt="${exp.titulo}">`).join("")}
+    </div>
+    <p class="description">${exp.descripcion}</p>
+  `;
+
+  const items = document.querySelectorAll("#rolList li");
+  items.forEach(item => item.classList.remove("active"));
+  items[index].classList.add("active");
+}
+
+// Mostrar primero por defecto
+window.onload = () => mostrarExperiencia(0);
