@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 </head>
 
@@ -118,22 +119,75 @@
     <!-- Word Experience -->
 
     <h2>Experiencia Laboral</h2>
-    <section class="experience-container">
-        <!-- Menú lateral -->
+    <div class="experience-container">
+        <!-- Lado izquierdo -->
         <div class="exp-menu">
-            <ul id="rolList">
-                <li class="active" onclick="mostrarExperiencia(0)">--> Desarrollo web y plataformas educativas</li>
+            <ul id="expList">
+                <li class="active" onclick="mostrarExperiencia(0)">--> Desarrollo web...</li>
                 <li onclick="mostrarExperiencia(1)">--> Profesora</li>
                 <li onclick="mostrarExperiencia(2)">--> Auxiliar administrativo</li>
                 <li onclick="mostrarExperiencia(3)">--> Comercial de ventas</li>
             </ul>
         </div>
 
-        <!-- Contenido dinámico -->
-        <div class="exp-content" id="expContent">
-            <!-- Se llena con JS -->
+        <!-- Lado derecho -->
+        <div class="exp-content" id="expContent"> </div>
+    </div>
+    <button class="cV_btn2"> <a href="Módulo Curso.pdf" target="_blank">Descargar pdf</a></button>
+
+    <!-- Habilidades -->
+    <div class="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-grid" id="skillsContainer">
+            <!-- JS insertará habilidades aquí -->
         </div>
-    </section>
+    </div>
+
+    <!-- Contacto -->
+    <div class="container-contact">
+        <div class="content">
+            <p class="form-title">Descubre quién soy y lo que puedo aportar</p>
+            <form id="contactForm">
+                <label for="name"><b>Nombre:</b></label>
+                <input class="input-contactForm" type="text" id="name" name="name" required>
+
+                <label class="email" for="email"><b>E-mail:</b></label>
+                <input class="input-contactForm" type="email" id="email" name="email" required>
+
+                <label class="phone" for="phone"><b>Número de teléfono:</b></label>
+                <input class="input-contactForm" type="tel" name="phone" required>
+
+                <label class="consulta" for="consulta"><b>Mensaje:</b></label>
+                <textarea id="consulta" name="consulta" required></textarea>
+
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    Acepto el <a href="#">aviso legal/política de privacidad</a>.
+                </label>
+
+                <button class="sendButton" type="submit" id="sendButton">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Conexión al WhatsApp -->
+    <div class="whatsapp-container" id="whatsapp-container">
+        <a href="https://api.whatsapp.com/send?phone=34637635577" class="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    
+ <!-- Footer -->
+        <div class="footer-menu">
+            <ul class="listado">
+                <li><a href="#">Inicio</a> | <a href="#">Sobre mi</a> | <a href="#">Formación| <a
+                            href="#">Experiencia Laboral</a> | <a href="#">Habilidades</a></a>| <a href="#">Contacto</a></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="text-copyright">&copy; 2024 Papeleos en las redes. Todos los derechos reservados.</p>
+        </div>
+    
 
 
 

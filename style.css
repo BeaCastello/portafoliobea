@@ -131,10 +131,6 @@ ul li:hover {
   color: #f0c975;
 }
 
-
-
-
-
 footer {
   background: #222;
   color: white;
@@ -157,7 +153,7 @@ footer {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
+    
     padding: 1rem;
 
   }
@@ -177,7 +173,7 @@ footer {
   #lang-btn {
     margin-left: 35px;
   }
-
+ 
 }
 
 /* Banner con video */
@@ -507,16 +503,13 @@ h2 {
 
 .experience-container {
   display: flex;
-  margin-left: 40px;
-  margin-right: 40px;  
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ccc;  
 }
 
 .exp-menu {
-  width: 40%;
-  border-right: 1px solid #ccc;
-  padding-right: 0.5rem;
-  
+  width: 55%;
+  border-right: 1px solid #ccc; 
+  flex:1;
 }
 
 .exp-menu ul {
@@ -537,10 +530,8 @@ h2 {
   color: #fff;
   border-radius: 5px;
 }
-.exp-content {
-  flex-grow: 1;
-  padding-left: 2rem;
-  
+.exp-content { 
+  flex:3;    
 }
 
 .exp-content h2 {
@@ -550,9 +541,9 @@ h2 {
 
 .image-row {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;  
+  justify-content: center;
 }
 
 .image-row img {
@@ -565,13 +556,41 @@ h2 {
 .description {
   font-size: 1rem;
   color: #444;
+  margin-top: 20px;
+  text-align: center;
 }
 
+  .exp-video {
+    height: 320px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+    margin-left: 20px;
+  }
+
+  .cV_btn2 {
+    background-color: #ec971f;
+    border-radius: 10px;
+    width: 150px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-color: transparent;
+    text-decoration: none;
+    color: #1f1f1f;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin-top: 20px;
+  }
+  
 @media (max-width: 768px) {
 h2{
   margin-bottom: 2rem;
   font-size: 1.7rem;
 }
+
   
   .experience-container {
     flex-direction: column;
@@ -586,12 +605,234 @@ h2{
   }
 
   .image-row img {
-    width: 100%;
+    width: 50%;
   }
     .exp-menu li.active {
     width: 290px;
     margin-left: 13px;
     font-size: 14px;
   }
+  .exp-video {
+    width: 300px;
+    height: 200px;
+    margin-left: 0px;
+  
+}
 }
 
+.skills{
+  margin: auto;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #4f46e5;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .skill-card {
+    padding: 1.2rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+}
+
+/*  Estilos Contactos */
+.container-contact {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  background-image: url('imagenes/contacto.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin-top: 30px;
+}
+
+.content {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  margin-left: 20px;
+}
+
+.input-contactForm,
+textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.terms-label {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sendButton {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .content {
+      padding: 10px 0px 10px 0px;
+      width: 320px;
+  }
+
+  .form-title {
+      font-size: 20px;
+  }
+
+  .form-subtitle {
+      font-size: 16px;
+  }
+
+  label {
+      font-size: 13px;
+  }
+
+  .input-contactForm,
+  textarea {
+      font-size: 13px;
+  }
+
+  .sendButton {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-title {
+      font-size: 18px;
+  }
+
+  .form-subtitle {
+      font-size: 14px;
+  }
+
+  .sendButton {
+      font-size: 12px;
+  }
+
+  .container-contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+/* Estilo Whatsapp */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;    
+  bottom: 10px;
+  right: 10px;
+  margin-top: 33em;
+
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+
+}

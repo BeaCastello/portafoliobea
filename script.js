@@ -120,8 +120,6 @@ function toggleContent() {
   }
 }
 
-
-
 const experiencias = [
   {
     titulo: "Desarrollo web y plataformas educativas",
@@ -136,7 +134,7 @@ const experiencias = [
     titulo: "Profesora",
     imagenes: [
       "imagenes/academia.png",
-      "imagenes/academia.png"
+      "imagenes/videoCurso.mp4"
     ],
     descripcion: "Planificación e impartición de clases adaptadas al nivel educativo y a las necesidades del estudiante."
   },
@@ -144,15 +142,16 @@ const experiencias = [
     titulo: "Auxiliar administrativo",
     imagenes: [
       "imagenes/paginaweb.png",
-      "imagenes/paginaweb.png",
-      "imagenes/paginaweb.png"
+      "imagenes/imgNoa´s.png",
+      "imagenes/imgAA.png"
     ],
     descripcion: "Apoyo en tareas administrativas, gestión de documentación y atención al cliente."
   },
   {
     titulo: "Comercial de ventas",
     imagenes: [
-      "imagenes/paginaweb.png"
+      "imagenes/comercial1.png",
+      "imagenes/comercial2.jpg",
     ],
     descripcion: "Encargado de la promoción, captación de clientes y cierre de ventas de productos y servicios."
   }
@@ -161,18 +160,84 @@ const experiencias = [
 function mostrarExperiencia(index) {
   const exp = experiencias[index];
   const container = document.getElementById("expContent");
+
+  const mediaHTML = exp.imagenes.map(src => {
+    if (src.endsWith(".mp4")) {
+      return `<video class="exp-video" controls>
+                <source src="${src}" type="video/mp4">
+                              </video>`;
+    } else {
+      return `<img class="exp-media" src="${src}" alt="${exp.titulo}">`;
+    }
+  }).join("");
+
   container.innerHTML = `
-    <h2>${exp.titulo}</h2>
-    <div class="image-row">
-      ${exp.imagenes.map(src => `<img src="${src}" alt="${exp.titulo}">`).join("")}
-    </div>
+    <h2 class="exp-titulo">${exp.titulo}</h2>
+    <div class="image-row">${mediaHTML}</div>
     <p class="description">${exp.descripcion}</p>
   `;
 
-  const items = document.querySelectorAll("#rolList li");
+  const items = document.querySelectorAll("#expList li");
   items.forEach(item => item.classList.remove("active"));
   items[index].classList.add("active");
 }
 
-// Mostrar primero por defecto
 window.onload = () => mostrarExperiencia(0);
+
+
+const habilidades = [
+  { nombre: "HTML5", icono: "🌐" },
+  { nombre: "CSS3", icono: "🎨" },
+  { nombre: "JavaScript", icono: "💻" },
+  { nombre: "React", icono: "⚛️" },
+  { nombre: "Creación Web", icono: "🧩" },
+  { nombre: "Base de Datos", icono: "🗄️" },
+  { nombre: "Creatividad", icono: "🎯" },
+  { nombre: "Microsoft Office", icono: "📊" },  
+  { nombre: "Gestión de Redes Sociales", icono: "📱" },
+  { nombre: "Trabajo en equipo", icono: "🤝" },
+  { nombre: "Resolución de problemas", icono: "🧠" },
+  { nombre: "Comunicación", icono: "🗣️" }, 
+];
+
+const container = document.getElementById("skillsContainer");
+
+habilidades.forEach(habilidad => {
+  const card = document.createElement("div");
+  card.className = "skill-card";
+  card.innerHTML = `
+    <div class="skill-icon">${habilidad.icono}</div>
+    <div class="skill-name">${habilidad.nombre}</div>
+  `;
+  container.appendChild(card);
+});
+
+// Enlace con emailjs
+
+(function () {
+  emailjs.init("Oyh2uTXc5UaZPqt7o");
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  emailjs.sendForm("service_9xutcqf","template_rzjqc3b", this)
+      .then(function () {
+          alert('Correo enviado con éxito!');
+      }, function (error) {
+          alert('Error al enviar el correo: ' + JSON.stringify(error));
+      });
+});
+
+// Conectando con el whatsapp
+const whatsappContainer = document.getElementById('whatsapp-container');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+      whatsappContainer.classList.add('visible');
+  } else {
+      whatsappContainer.classList.remove('visible');
+  }
+});
+
+
