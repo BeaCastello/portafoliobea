@@ -582,6 +582,7 @@ h2 {
 .media-item {
   text-align: center;
   width: 300px;
+  justify-items: center;
 }
 
 .media-item img,
@@ -640,7 +641,7 @@ h2{
   }
 
   .image-row img {
-    width: 50%;
+    width: 100%;
   }
     .exp-menu li.active {
     width: 290px;
@@ -650,8 +651,11 @@ h2{
   .exp-video {
     width: 300px;
     height: 200px;
-    margin-left: 0px;
-  
+    margin-left: 0px;  
+}
+.description{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 }
 

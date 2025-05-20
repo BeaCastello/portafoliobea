@@ -142,7 +142,7 @@ const experiencias = [
   {
     titulo: "Auxiliar administrativo",
     imagenes: [
-      "imagenes/paginaweb.png",
+      "imagenes/Academia2.jpg",
       "imagenes/imgNoa´s.png",
       "imagenes/imgAA.png"
     ],
@@ -152,7 +152,7 @@ const experiencias = [
     titulo: "Comercial de ventas",
     imagenes: [
       "imagenes/comercial1.png",
-      "imagenes/comercial2.jpg"
+      "imagenes/comercial3.png"
     ],
     descripcion: "Encargado de la promoción, captación de clientes y cierre de ventas de productos y servicios.",
   }
