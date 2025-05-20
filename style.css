@@ -551,6 +551,7 @@ h2 {
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
 }
 
 .description {
@@ -558,6 +559,7 @@ h2 {
   color: #444;
   margin-top: 20px;
   text-align: center;
+  
 }
 
   .exp-video {
@@ -568,6 +570,39 @@ h2 {
     object-fit: cover;
     margin-left: 20px;
   }
+
+  .image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.media-item {
+  text-align: center;
+  width: 300px;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.media-item a {
+  display: block;
+  margin-top: 8px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.media-item a:hover {
+  text-decoration: underline;
+}
 
   .cV_btn2 {
     background-color: #ec971f;
@@ -677,16 +712,14 @@ h2{
 .container-contact {
   display: flex;
   justify-content: left;
-  align-items: center;
-  padding: 20px;
+  align-items: center;  
   background-image: url('imagenes/contacto.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+  background-attachment: fixed;  
   margin-top: 30px;
-}
+  }
 
 .content {
   width: 450px;
@@ -834,5 +867,13 @@ textarea {
 .whatsapp-button img {
   width: 35px;
   height: 35px;
-
+}
+.footer{
+  margin-left: 30px;
+}
+.footer-menu a:hover{
+font-weight: bolder;
+}
+.footer-copyright p:hover{
+ font-weight: bolder;
 }

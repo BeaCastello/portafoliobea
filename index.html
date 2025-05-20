@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </head>
 
@@ -17,9 +17,9 @@
             <ul class="nav-links">
                 <li data-i18n="home"><a href="#home">Inicio</a></li>
                 <li data-i18n="aboutme"><a href="#aboutMe">Sobre mí</a></li>
-                <li data-i18n="training"><a href="#projects">Formación</a></li>
-                <li data-i18n="work_experience"><a href="#projects">Experiencia Laboral</a></li>
-                <li data-i18n="skills"><a href="#projects">Habilidades</a></li>
+                <li data-i18n="training"><a href="#training">Formación</a></li>
+                <li data-i18n="work_experience"><a href="#work_experience">Experiencia Laboral</a></li>
+                <li data-i18n="skills"><a href="#skills">Habilidades</a></li>
                 <li data-i18n="contact"><a href="#contact">Contacto</a></li>
                 <div class="lang-selector">
                     <button id="lang-btn">
@@ -44,8 +44,8 @@
             <h1 data-i18n="banner_title">Portafolio Bea</h1>
             <p data-i18n="banner_subtitle">Profesional creativa con pasión por la programación y el diseño gráfico</p>
             <div class="banner-buttons">
-                <button data-i18n="banner_btn" class="btn_transparent">Formación</button>
-                <button data-i18n="banner_btn1" class="btn_transparent">Contacto</button>
+                <a data-i18n="banner_btn" class="btn_transparent" href="#training">Formación</a>
+                <a data-i18n="banner_btn1" class="btn_transparent" href="#contact">Contacto</a>
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
         </p>
         <div class="aboutMe_btn">
             <button class="show_more" onclick="toggleContent()">Mostrar más</button>
-            <button class="cV_btn"> <a href="Módulo Curso.pdf" target="_blank" class="cV_btn">Descargar pdf</a></button>
+            <button class="cV_btn"> <a href="CV Beatriz Rodríguez.pdf" target="_blank" class="cV_btn">Descargar pdf</a></button>
         </div>
         <div class="content-container" id="content-container">
             <div class="text-content">
@@ -97,7 +97,7 @@
 
     <!-- Formación  -->
 
-    <div class="training">
+    <div class="training" id="training">
         <!-- Imágenes lado izquierdo -->
         <div class="training-left">
             <img src="imagenes/imagen chica.png" class="photo1" alt="Foto 1" />
@@ -112,14 +112,14 @@
                 habilidades en diversos campos. Mi enfoque está en combinar teoría con práctica para lograr resultados
                 reales y sostenibles.
             </p>
-            <button class="cV_btn1"> <a href="Módulo Curso.pdf" target="_blank">Descargar pdf</a></button>
+            <button class="cV_btn1"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar pdf</a></button>
         </div>
     </div>
 
     <!-- Word Experience -->
 
     <h2>Experiencia Laboral</h2>
-    <div class="experience-container">
+    <div class="experience-container" id="work_experience">
         <!-- Lado izquierdo -->
         <div class="exp-menu">
             <ul id="expList">
@@ -133,10 +133,10 @@
         <!-- Lado derecho -->
         <div class="exp-content" id="expContent"> </div>
     </div>
-    <button class="cV_btn2"> <a href="Módulo Curso.pdf" target="_blank">Descargar pdf</a></button>
+    <button class="cV_btn2"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar pdf</a></button>
 
     <!-- Habilidades -->
-    <div class="skills">
+    <div class="skills" id="skills">
         <h2>Habilidades</h2>
         <div class="skills-grid" id="skillsContainer">
             <!-- JS insertará habilidades aquí -->
@@ -144,7 +144,7 @@
     </div>
 
     <!-- Contacto -->
-    <div class="container-contact">
+    <div class="container-contact" id="contact">
         <div class="content">
             <p class="form-title">Descubre quién soy y lo que puedo aportar</p>
             <form id="contactForm">
@@ -175,19 +175,20 @@
         <a href="https://api.whatsapp.com/send?phone=34637635577" class="whatsapp-button" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </a>
-    
- <!-- Footer -->
-        <div class="footer-menu">
-            <ul class="listado">
-                <li><a href="#">Inicio</a> | <a href="#">Sobre mi</a> | <a href="#">Formación| <a
-                            href="#">Experiencia Laboral</a> | <a href="#">Habilidades</a></a>| <a href="#">Contacto</a></a></li>
-            </ul>
-        </div>
+    </div>
 
-        <div class="footer-copyright">
-            <p class="text-copyright">&copy; 2024 Papeleos en las redes. Todos los derechos reservados.</p>
-        </div>
     
+  <div class="footer">
+    <div class="footer-menu">
+        <a href="#home">Inicio</a> | <a href="#aboutMe">Sobre mi</a> | <a href="#training">Formación | <a
+                href="#work_experience">Experiencia Laboral</a> | <a href="#skills">Habilidades |</a> <a
+                href="#contact">Contacto</a>
+    </div>
+
+    <div class="footer-copyright">
+        <p class="text-copyright">&copy; 2025 Portafolio Bea. Todos los derechos reservados.</p>
+    </div>
+    </div>
 
 
 

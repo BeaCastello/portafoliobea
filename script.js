@@ -24,12 +24,6 @@ const translations = {
     banner_btn1: "Contáctame",
     work_experience: "Experiencia Laboral",
     contact: "Contacto",
-
-
-
-
-
-
     footer_text: "Todos los derechos reservados.",
     name_placeholder: "Tu nombre",
     email_placeholder: "Tu email",
@@ -119,16 +113,20 @@ function toggleContent() {
     button.textContent = 'Mostrar menos';
   }
 }
-
 const experiencias = [
   {
     titulo: "Desarrollo web y plataformas educativas",
     imagenes: [
-      "imagenes/paginaweb.png",
+      "imagenes/paginaweb3.png",
       "imagenes/paginaweb1.png",
       "imagenes/paginaweb2.png"
     ],
-    descripcion: "Creación de páginas web para la publicidad de servicios y plataformas educativas."
+    links: [
+      "https://beacastello.github.io/proyectoLaura/",
+      "https://beacastello.github.io/digitalHive/",
+      "https://beacastello.github.io/portafoliobea/"
+    ],
+    descripcion: "Creación de páginas web para la publicidad de servicios.",
   },
   {
     titulo: "Profesora",
@@ -136,7 +134,10 @@ const experiencias = [
       "imagenes/academia.png",
       "imagenes/videoCurso.mp4"
     ],
-    descripcion: "Planificación e impartición de clases adaptadas al nivel educativo y a las necesidades del estudiante."
+    links: [
+      "https://beacastello.github.io/digitalHive/"
+    ],
+    descripcion: "Diseño e implementación de clases personalizadas según el nivel educativo y las necesidades específicas de cada estudiante.",
   },
   {
     titulo: "Auxiliar administrativo",
@@ -145,15 +146,15 @@ const experiencias = [
       "imagenes/imgNoa´s.png",
       "imagenes/imgAA.png"
     ],
-    descripcion: "Apoyo en tareas administrativas, gestión de documentación y atención al cliente."
+    descripcion: "Apoyo en tareas administrativas, gestión de documentación y atención al cliente.",
   },
   {
     titulo: "Comercial de ventas",
     imagenes: [
       "imagenes/comercial1.png",
-      "imagenes/comercial2.jpg",
+      "imagenes/comercial2.jpg"
     ],
-    descripcion: "Encargado de la promoción, captación de clientes y cierre de ventas de productos y servicios."
+    descripcion: "Encargado de la promoción, captación de clientes y cierre de ventas de productos y servicios.",
   }
 ];
 
@@ -161,14 +162,22 @@ function mostrarExperiencia(index) {
   const exp = experiencias[index];
   const container = document.getElementById("expContent");
 
-  const mediaHTML = exp.imagenes.map(src => {
+  const mediaHTML = exp.imagenes.map((src, i) => {
+    const link = exp.links && exp.links[i] ? exp.links[i] : null;
+    let mediaElement = "";
+
     if (src.endsWith(".mp4")) {
-      return `<video class="exp-video" controls>
-                <source src="${src}" type="video/mp4">
-                              </video>`;
+      mediaElement = `
+        <video class="exp-video" controls>
+          <source src="${src}" type="video/mp4">
+        </video>`;
     } else {
-      return `<img class="exp-media" src="${src}" alt="${exp.titulo}">`;
+      mediaElement = `<img class="exp-media" src="${src}" alt="${exp.titulo}">`;
     }
+
+    const linkHTML = link ? `<div><a href="${link}" target="_blank">Ver sitio relacionado</a></div>` : "";
+
+    return `<div class="media-item">${mediaElement}${linkHTML}</div>`;
   }).join("");
 
   container.innerHTML = `
@@ -183,8 +192,6 @@ function mostrarExperiencia(index) {
 }
 
 window.onload = () => mostrarExperiencia(0);
-
-
 const habilidades = [
   { nombre: "HTML5", icono: "🌐" },
   { nombre: "CSS3", icono: "🎨" },
