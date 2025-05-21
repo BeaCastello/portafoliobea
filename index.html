@@ -7,6 +7,7 @@
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
@@ -15,12 +16,12 @@
         <img src="imagenes/20.png" class="logo" alt="logo">
         <nav id="nav">
             <ul class="nav-links">
-                <li data-i18n="home"><a href="#home">Inicio</a></li>
-                <li data-i18n="aboutme"><a href="#aboutMe">Sobre mí</a></li>
-                <li data-i18n="training"><a href="#training">Formación</a></li>
-                <li data-i18n="work_experience"><a href="#work_experience">Experiencia Laboral</a></li>
-                <li data-i18n="skills"><a href="#skills">Habilidades</a></li>
-                <li data-i18n="contact"><a href="#contact">Contacto</a></li>
+                <li><a href="#home" data-i18n="home">Inicio</a></li>
+                <li><a href="#aboutMe" data-i18n="aboutme">Sobre mí</a></li>
+                <li><a href="#training" data-i18n="training">Formación</a></li>
+                <li><a href="#work_experience" data-i18n="work_experience">Experiencia Laboral</a></li>
+                <li><a href="#skills" data-i18n="skills">Habilidades</a></li>
+                <li><a href="#contact" data-i18n="contact">Contacto</a></li>
                 <div class="lang-selector">
                     <button id="lang-btn">
                         <img src="https://flagcdn.com/es.svg" alt="ES" class="flag" />
@@ -52,42 +53,41 @@
 
     <!-- Sobre mi-->
     <div class="aboutMe" id="aboutMe">
-        <h2> Sobre mi </h2>
-        <p class="text_aboutMe">
+        <h2 data-i18n="aboutme"> Sobre mi </h2>
+        <p class="text_aboutMe" data-i18n="text_about_me">
             Soy una desarrolladora apasionada por la creación de experiencias digitales que combinan código limpio y
             diseño visual impactante.
             Me encanta convertir ideas en proyectos funcionales que conecten con las personas.
         </p>
-        <p class="text_aboutMe">
+        <p class="text_aboutMe" data-i18n="text_about_me1">
             Me destaco por ser una persona creativa, proactiva y con una actitud positiva hacia el aprendizaje continuo.
             Me adapto con facilidad a nuevos entornos, aprendo con rapidez y disfruto asumir retos que me permitan
-            crecer personal
-            y profesionalmente. Soy responsable, receptiva, con buenas habilidades para el trabajo en equipo y una
-            sólida capacidad de escucha.
-            Además, cuento con disponibilidad horaria y un manejo eficiente de herramientas informáticas.
+            crecer personal y profesionalmente. Soy responsable, receptiva, con buenas habilidades para el trabajo en
+            equipo y una
+            sólida capacidad de escucha. Además, cuento con disponibilidad horaria y un manejo eficiente de herramientas
+            informáticas.
         </p>
         <div class="aboutMe_btn">
-            <button class="show_more" onclick="toggleContent()">Mostrar más</button>
-            <button class="cV_btn"> <a href="CV Beatriz Rodríguez.pdf" target="_blank" class="cV_btn">Descargar pdf</a></button>
+            <button class="show_more" onclick="toggleContent()" data-i18n="show_more">Mostrar más</button>
+            <button class="cV_btn" data-i18n="download"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar
+                    pdf</a></button>
         </div>
         <div class="content-container" id="content-container">
             <div class="text-content">
-                <h3 class="additional-title">Formación en Ingeniería y Arquitectura, con especialización en Tecnologías
-                    de la Información y la
-                    Comunicación (TIC).</h3>
-                <p class="additional-text">
+                <h3 class="additional-title" data-i18n="additional_title">Formación en Ingeniería y Arquitectura, con
+                    especialización en Tecnologías
+                    de la Información y la Comunicación (TIC).</h3>
+                <p class="additional-text" data-i18n="additional_text">
                     He ampliado mi formación a través de cursos impartidos por LABORA, como Actividades Administrativas
                     en Relación con el Cliente y Operaciones Auxiliares de
                     Servicios Administrativos y Generales, fortaleciendo así un perfil multidisciplinar orientado al
-                    ámbito
-                    administrativo y tecnológico.
+                    ámbito administrativo y tecnológico.
                     Cuento con experiencia laboral en los sectores de informática, administración y diseño
                     gráfico. </p>
-                <p class="additional-text1">
+                <p class="additional-text" data-i18n="additional_text1">
                     Actualmente me especializo en diseño gráfico, desarrollo de sitios web, tiendas en
                     línea y plataformas educativas. También gestiono y actualizo redes sociales, además de crear
-                    y optimizar
-                    cuentas en diversas plataformas digitales.</p>
+                    y optimizar cuentas en diversas plataformas digitales.</p>
             </div>
             <div class="image-content">
                 <img src="imagenes/Foto Curriculum.jpg" alt="photo" class="Bea-photo">
@@ -98,7 +98,7 @@
     <!-- Formación  -->
 
     <div class="training" id="training">
-        <!-- Imágenes lado izquierdo -->
+        <!--   Imágenes lado izquierdo-->
         <div class="training-left">
             <img src="imagenes/imagen chica.png" class="photo1" alt="Foto 1" />
             <img src="imagenes/imagen chica.png" class="photo2" alt="Foto 2" />
@@ -106,66 +106,97 @@
 
         <!-- Texto lado derecho -->
         <div class="training-right">
-            <h2>Formación Profesional</h2>
-            <p>
+            <h2 data-i18n="job_training">Formación Profesional</h2>
+            <p data-i18n="additional_text2">
                 Con una base sólida en educación y una constante actualización de conocimientos, he desarrollado
                 habilidades en diversos campos. Mi enfoque está en combinar teoría con práctica para lograr resultados
                 reales y sostenibles.
             </p>
-            <button class="cV_btn1"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar pdf</a></button>
+            <button class="cV_btn1" data-i18n="download"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar
+                    pdf</a></button>
         </div>
     </div>
 
-    <!-- Word Experience -->
+    <!-- Word Experience  -->
 
-    <h2>Experiencia Laboral</h2>
+    <h2 data-i18n="work_experience">Experiencia Laboral</h2>
     <div class="experience-container" id="work_experience">
-        <!-- Lado izquierdo -->
+        <!--  Lado izquierdo  -->
         <div class="exp-menu">
             <ul id="expList">
-                <li class="active" onclick="mostrarExperiencia(0)">--> Desarrollo web...</li>
-                <li onclick="mostrarExperiencia(1)">--> Profesora</li>
-                <li onclick="mostrarExperiencia(2)">--> Auxiliar administrativo</li>
+                <li data-i18n="web_development" class="active" onclick="mostrarExperiencia(0)">--> Desarrollo
+                    web...</li>
+                <li data-i18n="teacher" onclick="mostrarExperiencia(1)">--> Profesora</li>
+                <li data-i18n="administrative_assistant" onclick="mostrarExperiencia(2)">--> Auxiliar administrativo
+                </li>
                 <li onclick="mostrarExperiencia(3)">--> Comercial de ventas</li>
             </ul>
         </div>
 
         <!-- Lado derecho -->
         <div class="exp-content" id="expContent"> </div>
+        <ul id="expList">
+
     </div>
-    <button class="cV_btn2"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar pdf</a></button>
+    <button class="cV_btn2" data-i18n="download"> <a href="CV Beatriz Rodríguez.pdf" target="_blank">Descargar
+            pdf</a></button>
+
+    <h2>Diseños a tu medida</h2>
+
+    <div id="customDesigns" class="designs-section">
+
+        <div class="slider">
+            <button class="nav-btn prev-btn">&#10094;</button>
+            <div class="slides-container">
+                <div class="slide active"><img src="imagenes/1.png" alt="Diseño 1" /></div>
+                <div class="slide"><img src="imagenes/7.png" alt="Diseño 2" /></div>
+                <div class="slide"><img src="imagenes/Calzado Cremor2.png" alt="Diseño 2" /></div>
+                <div class="slide"><img src="imagenes/Calzado Cremor3.png" alt="Diseño 2" /></div>
+                <div class="slide"><img src="imagenes/17.png" alt="Diseño 3" width="400" height="314" /></div>
+                <div class="slide"><img src="imagenes/8.png" alt="Diseño 4" width="400" height="331" /></div>
+                <div class="slide"><img src="imagenes/Peluquera4.png" alt="Diseño 5"/></div>
+                <div class="slide"><img src="imagenes/Lila.png" alt="Diseño 6" /></div>
+
+            </div>
+            <button class="nav-btn next-btn">&#10095;</button>
+        </div>
+
+        
+
+
+    </div>
 
     <!-- Habilidades -->
     <div class="skills" id="skills">
-        <h2>Habilidades</h2>
+        <h2 data-i18n="skills">Habilidades</h2>
         <div class="skills-grid" id="skillsContainer">
-            <!-- JS insertará habilidades aquí -->
+
         </div>
     </div>
 
     <!-- Contacto -->
     <div class="container-contact" id="contact">
         <div class="content">
-            <p class="form-title">Descubre quién soy y lo que puedo aportar</p>
+            <p class="form-title" data-i18n="form_title">Descubre quién soy y lo que puedo aportar</p>
             <form id="contactForm">
-                <label for="name"><b>Nombre:</b></label>
+                <label for="name" data-i18n="name"><b>Nombre:</b></label>
                 <input class="input-contactForm" type="text" id="name" name="name" required>
 
                 <label class="email" for="email"><b>E-mail:</b></label>
                 <input class="input-contactForm" type="email" id="email" name="email" required>
 
-                <label class="phone" for="phone"><b>Número de teléfono:</b></label>
+                <label class="phone" for="phone" data-i18n="phone"><b>Número de teléfono:</b></label>
                 <input class="input-contactForm" type="tel" name="phone" required>
 
-                <label class="consulta" for="consulta"><b>Mensaje:</b></label>
+                <label class="consulta" for="consulta" data-i18n="message"><b>Mensaje:</b></label>
                 <textarea id="consulta" name="consulta" required></textarea>
 
                 <label for="terms">
                     <input type="checkbox" id="terms" name="terms" required>
-                    Acepto el <a href="#">aviso legal/política de privacidad</a>.
+                    <a href="#" data-i18n="accept_politics">Acepto el aviso legal/política de privacidad</a>.
                 </label>
 
-                <button class="sendButton" type="submit" id="sendButton">Enviar</button>
+                <button class="sendButton" type="submit" id="sendButton" data-i18n="send">Enviar</button>
             </form>
         </div>
     </div>
@@ -177,78 +208,26 @@
         </a>
     </div>
 
-    
-  <div class="footer">
-    <div class="footer-menu">
-        <a href="#home">Inicio</a> | <a href="#aboutMe">Sobre mi</a> | <a href="#training">Formación | <a
-                href="#work_experience">Experiencia Laboral</a> | <a href="#skills">Habilidades |</a> <a
-                href="#contact">Contacto</a>
+
+    <div class="footer">
+        <div class="left-content">
+            <div class="footer-menu">
+                <a href="#home">Inicio</a> | <a href="#aboutMe">Sobre mi</a> | <a href="#training">Formación | <a
+                        href="#work_experience">Experiencia Laboral</a> | <a href="#skills">Habilidades |</a> <a
+                        href="#contact">Contacto</a>
+                    <p class="text-copyright">&copy; 2025 Portafolio Bea. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        <div class="right-content">
+            <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/designerbrm/" class="redes"
+                target="_blank">
+                @designerbrm </i></a>
+            <a href="mailto:designerbrm@gmail.com" class="redes"><i class="fa-regular fa-envelope"></i>
+                designerbrm@gmail.com</a>
+            <img class="phone" src="imagenes/phone.png"> <a href="tel:+34637635577" class="redes"> +34 637 635
+                577</a>
+        </div>
     </div>
-
-    <div class="footer-copyright">
-        <p class="text-copyright">&copy; 2025 Portafolio Bea. Todos los derechos reservados.</p>
-    </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
