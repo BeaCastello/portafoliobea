@@ -625,9 +625,6 @@ h2 {
     font-size: 1.7rem;
   }
   
-
-  /* Designer */
-
   .experience-container {
     flex-direction: column;
   }
@@ -660,7 +657,7 @@ h2 {
     margin-left: 20px;
     margin-right: 20px;
   }
-}
+
 
 .designs-section {
   text-align: center;
@@ -673,7 +670,9 @@ h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
+}
 
+/* Designer */
 .slider {
   position: relative;
   max-width: 600px;
@@ -722,6 +721,7 @@ h2 {
 .nav-btn:hover {
   background-color: #333;
 }
+
 
 /* Skills */
 
