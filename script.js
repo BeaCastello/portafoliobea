@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
 const langBtn = document.getElementById("lang-btn");
 const langMenu = document.getElementById("lang-menu");
 const langLabel = document.getElementById("lang-label");
@@ -62,7 +61,7 @@ const translations = {
     message: "Mensaje",
     accept_politics: "Acepto el aviso legal/política de privacidad",
     send: "Enviar",
-  
+    copyright: "© 2025 Portafolio Bea. Todos los derechos reservados.",
   },
   en: {
     home: "Home",
@@ -99,10 +98,7 @@ const translations = {
     message: "Message",
     accept_politics: "I accept the legal notice/privacy policy",
     send: "Send",
-
-
-
-    
+    copyright:"© 2025 Bea Portfolio. All rights reserved."    
   },
 };
 
