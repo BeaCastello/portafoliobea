@@ -663,7 +663,7 @@ h2 {
   text-align: center;
   padding: 60px 20px;
   background-color: #f5f5f5;
-    gap: 20px;
+  gap: 20px;
 }
 
 .designs-section h2 {
@@ -673,6 +673,9 @@ h2 {
 }
 
 /* Designer */
+.designs-section{
+background: url(imagenes/Fondo2.png);
+}
 .slider {
   position: relative;
   max-width: 600px;
@@ -692,8 +695,7 @@ h2 {
 
 .slide img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px; 
 }
 
 .nav-btn {
@@ -722,7 +724,19 @@ h2 {
   background-color: #333;
 }
 
-
+.advertising_text{
+text-align: center;
+margin-top: 20px;
+margin-bottom: 30px;
+}
+.text{
+font-weight: bolder;
+font-size: 30px;
+padding-top: 20px;
+}
+.text1{
+  font-size: 17px;
+  }
 /* Skills */
 
 .skills {
@@ -964,7 +978,7 @@ textarea {
   gap: 30px;
 }
 
-.phone {
+.phone-icon {
   width: 17px;
 }
 
