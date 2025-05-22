@@ -967,7 +967,7 @@ textarea {
 
 .footer-menu {
   margin-left: 30px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .footer-menu a:hover {
@@ -995,6 +995,7 @@ textarea {
 
 .redes a {
   margin-right: 20px;
+  margin-left: 3px;
 }
 
 .logo_footer {
@@ -1005,7 +1006,8 @@ textarea {
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
-        gap: 7px;
+    gap: 7px;
+    display: flex;
   }
 
   .text-copyright {
@@ -1015,6 +1017,9 @@ textarea {
   .right-content {
     margin-left: 30px;
   }
+   .footer-menu{
+    font-size: 17px;
+   }
 
   .redes i {
     margin-top: 6px;
@@ -1051,8 +1056,9 @@ textarea {
   }
 
   .footer-menu {
-    margin-left: 15px;
+    margin-left: 8px;
     margin-top: 1px;
+    font-size: 15px;
   }
 
   .redes {
@@ -1073,4 +1079,7 @@ textarea {
   .phone-icon {
     width: 18px;
   }
+  .logo_footer {
+    width: 150px;
+}
 }
