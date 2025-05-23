@@ -480,6 +480,7 @@ a {
     flex-direction: column;
     margin-bottom: 30px;
     justify-content: center;
+    align-items: center;
   }
 
   .training {
